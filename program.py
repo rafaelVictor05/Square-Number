@@ -1,4 +1,5 @@
 import sys
+import time
 
 # Verifica se foi passado um argumento
 if len(sys.argv) != 2:
@@ -14,3 +15,6 @@ except ValueError:
 
 # Calcula e imprime o quadrado do número
 print(number ** 2)
+
+while True:  # Mantém o container ativo
+    time.sleep(10)
