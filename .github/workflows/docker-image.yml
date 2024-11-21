@@ -50,5 +50,5 @@ jobs:
         docker pull ${{ secrets.DOCKER_USERNAME }}/square-number-app:latest &&
         (docker stop square-number-app || echo 'No container to stop') &&
         (docker rm square-number-app || echo 'No container to remove') &&
-        docker run -d --name square-number-app -p 8102:8102 ${{ secrets.DOCKER_USERNAME }}/square-number-app:latest
+        docker run -d --name square-number-app -p 8102:8080 ${{ secrets.DOCKER_USERNAME }}/square-number-app:latest
         " || echo 'Deploy failed. Check SSH or Docker setup.'

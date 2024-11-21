@@ -1,9 +1,11 @@
-FROM python:3.12-slim
+FROM node:14
 
 WORKDIR /app
 
-COPY program.py .
+COPY ./index.html .
 
 EXPOSE 8102
 
-CMD ["python", "program.py", "10"]
+RUN npm install -g http-server
+
+CMD ["http-server", "."]

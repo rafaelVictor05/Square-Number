@@ -1,5 +1,3 @@
 #### Usage:
-Run the program on the terminal with your desired number.
-```
-python program.py 10
-```
+
+Displays on the screen the word "Funcionando"
