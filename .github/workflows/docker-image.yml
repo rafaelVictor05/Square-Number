@@ -62,6 +62,6 @@ jobs:
         ssh -i ~/.ssh/id_rsa aluno@201.23.3.86 "
           docker info || sudo systemctl start docker;
           docker pull ${{ secrets.DOCKER_USERNAME }}/atividade:latest &&
-          docker run -d -p 8102:8102 --name atividade ${{ secrets.DOCKER_USERNAME }}/atividade:latest;
+          docker run -d -p 8102:8080 --name atividade ${{ secrets.DOCKER_USERNAME }}/atividade:latest;
           docker ps | grep atividade || echo 'Container failed to start';
         "
