@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY ./index.html .
 
-EXPOSE 8102
+EXPOSE 8085
 
 RUN npm install -g http-server
 
