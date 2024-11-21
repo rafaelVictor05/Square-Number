@@ -4,4 +4,6 @@ WORKDIR /app
 
 COPY program.py .
 
+EXPOSE 8102
+
 CMD ["python", "program.py", "10"]
